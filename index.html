@@ -4,6 +4,29 @@
   <meta charset="UTF-8">
   <title>SIËSTA – Sail Amsterdam 2025</title>
   <style>
+    /* Badge-style countdown */
+.countdown-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #D32F2F, #FF6659);
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+.countdown-badge .days {
+  font-size: 32px;
+  margin-right: 8px;
+}
+.countdown-badge .label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(211,47,47, 0.7); }
       70% { box-shadow: 0 0 0 10px rgba(211,47,47, 0); }
@@ -84,14 +107,15 @@
             </td>
           </tr>
 
-          <!-- Countdown -->
-          <tr>
-            <td>
-              <div class="countdown">
-                Nog <span>96</span> dagen tot Sail Amsterdam 2025!
-              </div>
-            </td>
-          </tr>
+          <!-- Dynamische badge-style countdown -->
+<tr>
+  <td>
+    <div class="countdown-badge" id="countdown">
+      <span class="days">96</span>
+      <span class="label">dagen tot Sail 2025</span>
+    </div>
+  </td>
+</tr>
           
           <!-- Call-to-action -->
           <tr>
@@ -168,5 +192,18 @@
       </td>
     </tr>
   </table>
+<script>
+  // Doel: 20 augustus 2025
+  const target = new Date(2025, 7, 20);
+  function updateCountdown() {
+    const now = new Date();
+    const diff = target - now;
+    const days = Math.max(Math.ceil(diff / (1000*60*60*24)), 0);
+    document.querySelector('#countdown .days').textContent = days;
+  }
+  updateCountdown();
+  // Update elke 6 uur
+  setInterval(updateCountdown, 1000 * 60 * 60 * 6);
+</script>
 </body>
 </html>
