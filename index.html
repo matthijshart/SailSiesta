@@ -147,13 +147,14 @@
         </select>
       </label><br>
       <label>
-        Tijdstip:<br>
-        <select name="tijd" required style="width:100%;padding:8px;margin:4px 0 16px;">
-          <option value="" disabled selected>Kies een shift…</option>
-          <option value="ochtend">Ochtend (10:30–13:00)</option>
-          <option value="middag">Middag (13:30–16:00)</option>
-          <option value="avond">Avond (16:30–19:00)</option>
-        </select>
+        Begintijd:<br>
+        <input type="time" name="begin_tijd" required
+               style="width:100%;padding:8px;margin:4px 0 12px;">
+      </label><br>
+      <label>
+        Eindtijd:<br>
+        <input type="time" name="eind_tijd" required
+               style="width:100%;padding:8px;margin:4px 0 16px;">
       </label><br>
       <button type="submit" class="cta-button" style="font-size:15px;">
         Aanvraag versturen
