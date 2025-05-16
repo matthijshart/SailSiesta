@@ -84,40 +84,48 @@
             </td>
           </tr>
 
-          <!-- ───── Beschikbaarheid ───── -->
+          <!-- ───── Compacte beschikbaarheidsagenda ───── -->
 <tr>
   <td style="padding:20px 40px;">
-    <h2 style="color:#2f3438;margin-bottom:8px;">Beschikbaarheid</h2>
-    <table style="width:100%;border-collapse:collapse;font-size:14px;">
+    <h2 style="color:#2f3438;margin-bottom:8px;">Beschikbaarheid per shift</h2>
+    <table style="width:100%;border-collapse:collapse;font-size:14px;text-align:center;">
       <tr>
-        <th style="border:1px solid #ddd;padding:8px;text-align:left;">Datum</th>
-        <th style="border:1px solid #ddd;padding:8px;text-align:left;">Status</th>
+        <th style="border:1px solid #ddd;padding:6px;background:#f0f0f0;"></th>
+        <th style="border:1px solid #ddd;padding:6px;background:#f0f0f0;">Wo 20</th>
+        <th style="border:1px solid #ddd;padding:6px;background:#f0f0f0;">Do 21</th>
+        <th style="border:1px solid #ddd;padding:6px;background:#f0f0f0;">Vr 22</th>
+        <th style="border:1px solid #ddd;padding:6px;background:#f0f0f0;">Za 23</th>
+        <th style="border:1px solid #ddd;padding:6px;background:#f0f0f0;">Zo 24</th>
       </tr>
       <tr>
-        <td style="border:1px solid #ddd;padding:8px;">20 aug 2025</td>
-        <td style="border:1px solid #ddd;padding:8px;color:green;">Beschikbaar</td>
+        <td style="border:1px solid #ddd;padding:6px;">Ochtend</td>
+        <td style="border:1px solid #ddd;padding:6px;color:green;">✔️</td>
+        <td style="border:1px solid #ddd;padding:6px;color:red;">❌</td>
+        <td style="border:1px solid #ddd;padding:6px;color:red;">❌</td>
+        <td style="border:1px solid #ddd;padding:6px;color:green;">✔️</td>
+        <td style="border:1px solid #ddd;padding:6px;color:green;">✔️</td>
       </tr>
       <tr>
-        <td style="border:1px solid #ddd;padding:8px;">21 aug 2025</td>
-        <td style="border:1px solid #ddd;padding:8px;color:red;">Volgeboekt</td>
+        <td style="border:1px solid #ddd;padding:6px;">Middag</td>
+        <td style="border:1px solid #ddd;padding:6px;color:green;">✔️</td>
+        <td style="border:1px solid #ddd;padding:6px;color:red;">❌</td>
+        <td style="border:1px solid #ddd;padding:6px;color:red;">❌</td>
+        <td style="border:1px solid #ddd;padding:6px;color:green;">✔️</td>
+        <td style="border:1px solid #ddd;padding:6px;color:green;">✔️</td>
       </tr>
       <tr>
-        <td style="border:1px solid #ddd;padding:8px;">22 aug 2025</td>
-        <td style="border:1px solid #ddd;padding:8px;color:red;">Volgeboekt</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd;padding:8px;">23 aug 2025</td>
-        <td style="border:1px solid #ddd;padding:8px;color:green;">Beschikbaar</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd;padding:8px;">24 aug 2025</td>
-        <td style="border:1px solid #ddd;padding:8px;color:green;">Beschikbaar</td>
+        <td style="border:1px solid #ddd;padding:6px;">Avond</td>
+        <td style="border:1px solid #ddd;padding:6px;color:green;">✔️</td>
+        <td style="border:1px solid #ddd;padding:6px;color:red;">❌</td>
+        <td style="border:1px solid #ddd;padding:6px;color:red;">❌</td>
+        <td style="border:1px solid #ddd;padding:6px;color:green;">✔️</td>
+        <td style="border:1px solid #ddd;padding:6px;color:green;">✔️</td>
       </tr>
     </table>
   </td>
 </tr>
 
-<!-- ───── Aanvraagformulier ───── -->
+<!-- ───── Direct aanvraagformulier ───── -->
 <tr>
   <td style="padding:20px 40px;background:#f9f9f9;">
     <h2 style="color:#2f3438;margin-bottom:12px;">Direct aanvraagformulier</h2>
@@ -129,24 +137,22 @@
       </label><br>
       <label>
         Gewenste dag:<br>
-        <select name="dag" required
-                style="width:100%;padding:8px;margin:4px 0 12px;">
+        <select name="dag" required style="width:100%;padding:8px;margin:4px 0 12px;">
           <option value="" disabled selected>Kies een dag…</option>
-          <option value="20-08-2025">20 aug 2025</option>
-          <option value="21-08-2025" disabled>21 aug 2025 (vol)</option>
-          <option value="22-08-2025" disabled>22 aug 2025 (vol)</option>
-          <option value="23-08-2025">23 aug 2025</option>
-          <option value="24-08-2025">24 aug 2025</option>
+          <option value="20-08-2025">Wo 20 aug</option>
+          <option value="21-08-2025" disabled>Do 21 aug (vol)</option>
+          <option value="22-08-2025" disabled>Vr 22 aug (vol)</option>
+          <option value="23-08-2025">Za 23 aug</option>
+          <option value="24-08-2025">Zo 24 aug</option>
         </select>
       </label><br>
       <label>
         Tijdstip:<br>
-        <select name="tijd" required
-                style="width:100%;padding:8px;margin:4px 0 16px;">
-          <option value="" disabled selected>Kies een tijd…</option>
-          <option value="10:30-13:00">10:30 – 13:00</option>
-          <option value="13:30-16:00">13:30 – 16:00</option>
-          <option value="16:30-19:00">16:30 – 19:00</option>
+        <select name="tijd" required style="width:100%;padding:8px;margin:4px 0 16px;">
+          <option value="" disabled selected>Kies een shift…</option>
+          <option value="ochtend">Ochtend (10:30–13:00)</option>
+          <option value="middag">Middag (13:30–16:00)</option>
+          <option value="avond">Avond (16:30–19:00)</option>
         </select>
       </label><br>
       <button type="submit" class="cta-button" style="font-size:15px;">
